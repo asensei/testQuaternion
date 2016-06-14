@@ -20,4 +20,10 @@
 }
 
 
+
+-(NSString*)description {
+    return [NSString stringWithFormat:@"Quaternion description: x:%f, y:%f, z:%f, w:%f",self.quaternion.v.x, self.quaternion.v.y, self.quaternion.v.z, self.quaternion.s];
+}
+
+
 @end
