@@ -13,6 +13,7 @@
 		A99E6CAE1D10216E003F6583 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A99E6CAD1D10216E003F6583 /* Assets.xcassets */; };
 		A99E6CB11D10216E003F6583 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A99E6CAF1D10216E003F6583 /* LaunchScreen.storyboard */; };
 		A99E6CBC1D10216E003F6583 /* testQuaternionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99E6CBB1D10216E003F6583 /* testQuaternionsTests.swift */; };
+		A99E6CC91D102658003F6583 /* cQuaternionContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = A99E6CC81D102658003F6583 /* cQuaternionContainer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,9 @@
 		A99E6CB71D10216E003F6583 /* testQuaternionsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testQuaternionsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A99E6CBB1D10216E003F6583 /* testQuaternionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testQuaternionsTests.swift; sourceTree = "<group>"; };
 		A99E6CBD1D10216E003F6583 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A99E6CC61D102657003F6583 /* testQuaternions-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "testQuaternions-Bridging-Header.h"; sourceTree = "<group>"; };
+		A99E6CC71D102658003F6583 /* cQuaternionContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cQuaternionContainer.h; sourceTree = "<group>"; };
+		A99E6CC81D102658003F6583 /* cQuaternionContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cQuaternionContainer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,9 @@
 				A99E6CAD1D10216E003F6583 /* Assets.xcassets */,
 				A99E6CAF1D10216E003F6583 /* LaunchScreen.storyboard */,
 				A99E6CB21D10216E003F6583 /* Info.plist */,
+				A99E6CC71D102658003F6583 /* cQuaternionContainer.h */,
+				A99E6CC81D102658003F6583 /* cQuaternionContainer.m */,
+				A99E6CC61D102657003F6583 /* testQuaternions-Bridging-Header.h */,
 			);
 			path = testQuaternions;
 			sourceTree = "<group>";
@@ -146,6 +153,7 @@
 				TargetAttributes = {
 					A99E6CA21D10216E003F6583 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = EYKNZJ568B;
 					};
 					A99E6CB61D10216E003F6583 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -197,6 +205,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A99E6CC91D102658003F6583 /* cQuaternionContainer.m in Sources */,
 				A99E6CA91D10216E003F6583 /* ViewController.swift in Sources */,
 				A99E6CA71D10216E003F6583 /* AppDelegate.swift in Sources */,
 			);
@@ -329,10 +338,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = testQuaternions/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.asensei.testQuaternions;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "testQuaternions/testQuaternions-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -340,10 +353,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = testQuaternions/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.asensei.testQuaternions;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "testQuaternions/testQuaternions-Bridging-Header.h";
 			};
 			name = Release;
 		};

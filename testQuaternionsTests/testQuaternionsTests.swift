@@ -6,8 +6,26 @@
 //  Copyright © 2016 asensei inc. All rights reserved.
 //
 
+
+// xcodebuild -scheme testQuaternions -destination "platform=iOS,name=Bill's iPhone 5S" build test
+// xcodebuild -scheme testQuaternions -sdk iphonesimulator build test
+
+
+
 import XCTest
 @testable import testQuaternions
+import GLKit
+
+class QuaternionContainer {
+    
+    var quaternion : GLKQuaternion = GLKQuaternionIdentity
+    
+    init(quaternion: GLKQuaternion) {
+        self.quaternion = quaternion
+    }
+}
+
+
 
 class testQuaternionsTests: XCTestCase {
     
@@ -21,16 +39,23 @@ class testQuaternionsTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+
+    
+    func printQuaternion(q: GLKQuaternion) {
+        print("Quaternion:  x:\(q.v.x), y:\(q.v.y), z:\(q.v.z), w:\(q.s),")
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock {
-            // Put the code you want to measure the time of here.
-        }
-    }
     
+    func testQuaternionMake() {
+        
+        let q = GLKQuaternionMake(1, 0, 1, 0)
+        printQuaternion(q)
+
+        let b = QuaternionContainer(quaternion: q)
+        printQuaternion(b.quaternion)
+        print("quaternion result : \(b)")
+
+        XCTAssertEqual(b.quaternion.v.x, 1.0)
+        
+    }
 }
