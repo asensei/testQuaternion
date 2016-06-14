@@ -7,11 +7,6 @@
 //
 
 
-// xcodebuild -scheme testQuaternions -destination "platform=iOS,name=Bill's iPhone 5S" build test
-// xcodebuild -scheme testQuaternions -sdk iphonesimulator build test
-
-
-
 import XCTest
 @testable import testQuaternions
 import GLKit
@@ -42,11 +37,11 @@ class testQuaternionsTests: XCTestCase {
 
     
     func printQuaternion(q: GLKQuaternion) {
-        print("Quaternion:  x:\(q.v.x), y:\(q.v.y), z:\(q.v.z), w:\(q.s),")
+        print("Quaternion:  x:\(q.v.x), y:\(q.v.y), z:\(q.v.z), w:\(q.s)")
     }
     
     
-    func testQuaternionMake() {
+    func testQuaternionSwiftOnly() {
         
         let q = GLKQuaternionMake(1, 0, 1, 0)
         printQuaternion(q)
@@ -58,4 +53,20 @@ class testQuaternionsTests: XCTestCase {
         XCTAssertEqual(b.quaternion.v.x, 1.0)
         
     }
+    
+    
+    func testQuaternionSwiftCallingToObjectiveC() {
+
+        let q = GLKQuaternionMake(1, 0, 1, 0)
+        printQuaternion(q)
+
+        let b = cQuaternionContainer(quaternion: q)
+        printQuaternion(b.quaternion)
+        print("quaternion result : \(b)")
+        
+        XCTAssertEqual(b.quaternion.v.x, 1.0)
+        
+    }
+    
+    
 }

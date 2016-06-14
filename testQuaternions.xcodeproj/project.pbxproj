@@ -40,6 +40,7 @@
 		A99E6CC61D102657003F6583 /* testQuaternions-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "testQuaternions-Bridging-Header.h"; sourceTree = "<group>"; };
 		A99E6CC71D102658003F6583 /* cQuaternionContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cQuaternionContainer.h; sourceTree = "<group>"; };
 		A99E6CC81D102658003F6583 /* cQuaternionContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cQuaternionContainer.m; sourceTree = "<group>"; };
+		A99E6CCA1D103579003F6583 /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +64,7 @@
 		A99E6C9A1D10216E003F6583 = {
 			isa = PBXGroup;
 			children = (
+				A99E6CCA1D103579003F6583 /* readme.md */,
 				A99E6CA51D10216E003F6583 /* testQuaternions */,
 				A99E6CBA1D10216E003F6583 /* testQuaternionsTests */,
 				A99E6CA41D10216E003F6583 /* Products */,
